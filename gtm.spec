@@ -5,12 +5,13 @@ Summary(pl):	Zarz±dca Transferu GNOME
 Summary(pt):	Gestor de Transferências Gnome
 Name:		gtm
 Version:	0.4.11
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://prdownloads.sourceforge.net/gtm/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_ac.patch
+Patch2:		%{name}-wget.patch
 URL:		http://gtm.sourceforge.net/
 BuildRequires:	ORBit-devel >= 0.4.0
 BuildRequires:	autoconf
@@ -67,6 +68,7 @@ estas tarefas usando o wget.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
