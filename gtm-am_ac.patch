@@ -1,0 +1,24 @@
+diff -urN gtm-0.4.11.org/applet/Makefile.am gtm-0.4.11/applet/Makefile.am
+--- gtm-0.4.11.org/applet/Makefile.am	Fri Nov 16 21:43:29 2001
++++ gtm-0.4.11/applet/Makefile.am	Fri Nov 16 21:43:51 2001
+@@ -28,7 +28,7 @@
+ 	Gtm-stubs.c \
+ 	Gtm.h
+ 
+-CLEANFILES += $(CORBA_SRCLIST)
++CLEANFILES = $(CORBA_SRCLIST)
+ 
+ $(CORBA_SRCLIST): $(top_srcdir)/idl/Gtm.idl $(ORBIT_IDL)
+ 	orbit-idl $(top_srcdir)/idl/Gtm.idl
+diff -urN gtm-0.4.11.org/src/Makefile.am gtm-0.4.11/src/Makefile.am
+--- gtm-0.4.11.org/src/Makefile.am	Fri Nov 16 21:43:29 2001
++++ gtm-0.4.11/src/Makefile.am	Fri Nov 16 21:44:05 2001
+@@ -51,7 +51,7 @@
+ EXTRA_DIST = finish.xpm run.xpm stop.xpm robot.xpm unstarted.xpm \
+ 	pause-robot.xpm dl-infopage.xpm num-dl.xpm
+ 
+-CLEANFILES += $(CORBA_SRCLIST)
++CLEANFILES = $(CORBA_SRCLIST)
+ 
+ $(CORBA_SRCLIST): $(top_srcdir)/idl/Gtm.idl $(ORBIT_IDL)
+ 	orbit-idl $(top_srcdir)/idl/Gtm.idl
