@@ -5,7 +5,7 @@ Summary(pl):	Zarz±dca Transferu GNOME
 Summary(pt):	Gestor de Transferências Gnome
 Name:		gtm
 Version:	0.4.11
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Group(de):	X11/Applikationen/Netzwerkwesen
@@ -100,3 +100,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applets/Network/*
 %{_pixmapsdir}/*
 %{_datadir}/sounds/gtm
+%{_datadir}/idl/*
+%{_datadir}/oaf/*
