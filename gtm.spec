@@ -8,7 +8,7 @@ Version:	0.4.11
 Release:	3
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://prdownloads.sourceforge.net/gtm/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/gtm/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_ac.patch
 Patch2:		%{name}-wget.patch
