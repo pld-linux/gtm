@@ -4,7 +4,7 @@ Summary(it):	Gestore di traferimenti del Gnome
 Summary(pl):	Zarz±dca Transferu GNOME
 Summary(pt):	Gestor de Transferências Gnome
 Name:		gtm
-Version:	0.4.9
+Version:	0.4.11
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
@@ -67,13 +67,12 @@ estas tarefas usando o wget.
 %setup -q
 %patch0 -p1
 
+#aclocal -I macros
+#autoconf
+aclocal -I macros -I .
+automake -a -c --no-force
+
 %build
-rm -f missing
-libtoolize --copy --force
-gettextize --copy --force
-aclocal -I macros
-autoconf
-automake -a -c
 %configure \
 	--enable-applet
 %{__make}
@@ -81,9 +80,8 @@ automake -a -c
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	Networkdir=%{_applnkdir}/Network/Misc
+%{__make} DESTDIR=$RPM_BUILD_ROOT \
+	  Networkdir=%{_applnkdir}/Network/Misc install
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
