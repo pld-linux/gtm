@@ -71,8 +71,8 @@ estas tarefas usando o wget.
 %build
 rm -f missing
 aclocal -I macros
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-applet
 %{__make}
