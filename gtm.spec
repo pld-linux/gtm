@@ -1,8 +1,8 @@
 Summary:	GNOME Transfer Manager
-Summary(es):	Gestor de Transferencias Gnome
-Summary(it):	Gestore di traferimenti del Gnome
+Summary(es):	Gestor de Transferencias GNOME
+Summary(it):	Gestore di traferimenti del GNOME
 Summary(pl):	Zarz±dca Transferu GNOME
-Summary(pt):	Gestor de Transferências Gnome
+Summary(pt):	Gestor de Transferências GNOME
 Name:		gtm
 Version:	0.4.11
 Release:	3
