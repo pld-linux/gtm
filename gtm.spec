@@ -14,13 +14,13 @@ Source0:	http://prdownloads.sourceforge.net/gtm/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_ac.patch
 URL:		http://gtm.sourceforge.net/
+BuildRequires:	ORBit-devel >= 0.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	ORBit-devel >= 0.4.0
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.0.0
 BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	gettext-devel
+BuildRequires:	libtool
 Requires:	wget >= 1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
