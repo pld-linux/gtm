@@ -12,6 +12,7 @@ Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	http://prdownloads.sourceforge.net/gtm/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-am_ac.patch
 URL:		http://gtm.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -66,13 +67,13 @@ estas tarefas usando o wget.
 %prep
 %setup -q
 %patch0 -p1
-
-#aclocal -I macros
-#autoconf
-aclocal -I macros -I .
-automake -a -c --no-force
+%patch1 -p1
 
 %build
+rm -f missing
+aclocal -I macros
+autoconf
+automake -a -c
 %configure \
 	--enable-applet
 %{__make}
