@@ -1,0 +1,22 @@
+--- ./src/wget-log.c.orig	Thu Nov 15 18:44:08 2001
++++ ./src/wget-log.c	Fri May 24 21:39:31 2002
+@@ -70,7 +70,8 @@
+     switch (file_data->state) {
+ 	case DL_NOT_CONNECTED:
+ 	    /* First check to see if connected to the host correctly */
+-	    if (strstr (file_data->line, "connected!") != NULL) {
++	    if ((strstr (file_data->line, "connected!") != NULL) ||
++                (strstr (file_data->line, "connected.") != NULL)) {
+ 		file_data_set_state (file_data, DL_CONNECTED, TRUE);
+ 		break;
+ 	    }
+@@ -78,7 +79,8 @@
+ 	    /* We are not connected to the host so we must find the problem */
+ 	    if (strncmp (file_data->line, "--", 2) == 0 ||
+ 		strncmp (file_data->line, "  ", 2) == 0 ||
+-		strncmp (file_data->line, "Connecting to ", 14) == 0)
++		strncmp (file_data->line, "Connecting to ", 14) == 0 ||
++		strncmp (file_data->line, "Resolving ", 10 ) == 0 )
+ 		break;
+ 	    else if (strncmp (file_data->line, "socket: ", 8) == 0)
+ 		show_error (file_data,
