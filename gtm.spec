@@ -19,6 +19,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.0.0
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libtool
+BuildRequires:	wget >= 1.6
 Requires:	wget >= 1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
