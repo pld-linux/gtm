@@ -51,7 +51,7 @@ connessione dial-up con Internet. Il programma esegue i suoi compiti
 usando wget come back-end.
 
 %description -l pl
-GTM pozwala u¿ytkownikowi na przesy³anie wielu plików ze stron www.
+GTM pozwala u¿ytkownikowi na przesy³anie wielu plików ze stron WWW.
 Pliki mog± byæ przesy³ane w wielu czê¶ciach przy czym ka¿da cze¶æ
 przesy³ana np. przy kolejnej sesji modemowej. GTM u¿ywa wget'a do
 wykonywania tych zadañ.
