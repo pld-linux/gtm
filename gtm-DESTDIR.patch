@@ -1,9 +1,42 @@
-diff -urN gtm-0.4.11.orig/doc/C/Makefile.am gtm-0.4.11/doc/C/Makefile.am
---- gtm-0.4.11.orig/doc/C/Makefile.am	Fri Nov 16 03:44:08 2001
-+++ gtm-0.4.11/doc/C/Makefile.am	Fri Nov 16 16:29:30 2001
-@@ -1,4 +1,4 @@
--gtm_helpdir = $(datadir)/gnome/help/gtm/C
-+gtm_helpdir = $(DESTDIR)$(datadir)/gnome/help/gtm/C
+diff -urN gtm-0.4.11.org/doc/C/Makefile.am gtm-0.4.11/doc/C/Makefile.am
+--- gtm-0.4.11.org/doc/C/Makefile.am	Fri Nov 16 21:43:29 2001
++++ gtm-0.4.11/doc/C/Makefile.am	Fri Nov 16 21:57:22 2001
+@@ -36,14 +36,14 @@
+ 	-cp images/*.png $(distdir)/images
  
- gtm_help_DATA =         \
-         topic.dat
+ install-data-local: gtm/index.html
+-	$(mkinstalldirs) $(gtm_helpdir)/images
++	$(mkinstalldirs) $(DESTDIR)$(gtm_helpdir)/images
+ 	-for file in $(srcdir)/gtm/*.html; do \
+ 	basefile=`basename $$file`; \
+-	$(INSTALL_DATA) $(srcdir)/$$file $(gtm_helpdir)/$$basefile; \
++	$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(gtm_helpdir)/$$basefile; \
+ 	done
+ 	-for file in $(srcdir)/images/*.png; do \
+ 	basefile=`basename $$file`; \
+-	$(INSTALL_DATA) $(srcdir)/$$file $(gtm_helpdir)/images/$$basefile; \
++	$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(gtm_helpdir)/images/$$basefile; \
+ 	done
+ 
+ gtm.ps: gtm.sgml
+diff -urN gtm-0.4.11.org/doc/pt/Makefile.am gtm-0.4.11/doc/pt/Makefile.am
+--- gtm-0.4.11.org/doc/pt/Makefile.am	Fri Nov 16 21:43:29 2001
++++ gtm-0.4.11/doc/pt/Makefile.am	Fri Nov 16 21:56:56 2001
+@@ -36,14 +36,14 @@
+ 	-cp images/*.png $(distdir)/images
+ 
+ install-data-local: gtm/index.html
+-	$(mkinstalldirs) $(gtm_helpdir)/images
++	$(mkinstalldirs) $(DESTDIR)$(gtm_helpdir)/images
+ 	-for file in $(srcdir)/gtm/*.html; do \
+ 	basefile=`basename $$file`; \
+-	$(INSTALL_DATA) $(srcdir)/$$file $(gtm_helpdir)/$$basefile; \
++	$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(gtm_helpdir)/$$basefile; \
+ 	done
+ 	-for file in $(srcdir)/images/*.png; do \
+ 	basefile=`basename $$file`; \
+-	$(INSTALL_DATA) $(srcdir)/$$file $(gtm_helpdir)/images/$$basefile; \
++	$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(gtm_helpdir)/images/$$basefile; \
+ 	done
+ 
+ gtm.ps: gtm.sgml
