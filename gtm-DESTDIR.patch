@@ -1,16 +1,9 @@
-diff -urN gtm-0.4.9.org/doc/C/Makefile.am gtm-0.4.9/doc/C/Makefile.am
---- gtm-0.4.9.org/doc/C/Makefile.am	Sun Jul  1 17:50:19 2001
-+++ gtm-0.4.9/doc/C/Makefile.am	Sun Jul  1 17:50:56 2001
-@@ -33,10 +33,10 @@
- 	-cp index.html $(distdir)
+diff -urN gtm-0.4.11.orig/doc/C/Makefile.am gtm-0.4.11/doc/C/Makefile.am
+--- gtm-0.4.11.orig/doc/C/Makefile.am	Fri Nov 16 03:44:08 2001
++++ gtm-0.4.11/doc/C/Makefile.am	Fri Nov 16 16:29:30 2001
+@@ -1,4 +1,4 @@
+-gtm_helpdir = $(datadir)/gnome/help/gtm/C
++gtm_helpdir = $(DESTDIR)$(datadir)/gnome/help/gtm/C
  
- install-data-local: index.html
--	$(mkinstalldirs) $(gtm_helpdir)/images
-+	$(mkinstalldirs) $(DESTDIR)$(gtm_helpdir)/images
- 	-for file in $(srcdir)/gtm/*.html $(srcdir)/gtm/*.css; do \
- 	basefile=`basename $$file`; \
--	$(INSTALL_DATA) $(srcdir)/$$file $(gtm_helpdir)/$$basefile; \
-+	$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(gtm_helpdir)/$$basefile; \
- 	done
- 
- gtm.ps: gtm.sgml
+ gtm_help_DATA =         \
+         topic.dat
