@@ -97,8 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/*/*/*
-%{_applnkdir}/Network/*.desktop
-%{_datadir}/idl/*.idl
-%{_datadir}/applets/Network/Misc/*
+%{_applnkdir}/Network/Misc/*.desktop
+%{_datadir}/applets/Network/*
 %{_pixmapsdir}/*
 %{_datadir}/sounds/gtm
