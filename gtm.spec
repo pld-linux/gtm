@@ -1,8 +1,8 @@
 Summary:	GNOME Transfer Manager
-Summary(es):	Gestor de Transferencias GNOME
-Summary(it):	Gestore di traferimenti del GNOME
-Summary(pl):	Zarz±dca Transferu GNOME
-Summary(pt):	Gestor de Transferências GNOME
+Summary(es.UTF-8):   Gestor de Transferencias GNOME
+Summary(it.UTF-8):   Gestore di traferimenti del GNOME
+Summary(pl.UTF-8):   ZarzÄ…dca Transferu GNOME
+Summary(pt.UTF-8):   Gestor de TransferÃªncias GNOME
 Name:		gtm
 Version:	0.4.11
 Release:	3
@@ -34,15 +34,15 @@ separate session that the user is connected to the Internet. This is
 most useful to users with dialup connections. The program performs
 these tasks using wget as its back-end.
 
-%description -l es
-GTransferManager permite al usuario descargar múltiples ficheros de la
+%description -l es.UTF-8
+GTransferManager permite al usuario descargar mÃºltiples ficheros de la
 web. Estos ficheros pueden ser descargados en varias partes y cada
-parte puede ser descargada en una sesión diferente en la que el
-usuario esté conectado a Internet. Esto es especialmente util a los
+parte puede ser descargada en una sesiÃ³n diferente en la que el
+usuario estÃ© conectado a Internet. Esto es especialmente util a los
 usuarions con conexiones tipo dialup (modems). El programa realiza
 estas tareas utilizando el wget como herramienta de descarga.
 
-%description -l it
+%description -l it.UTF-8
 GTransferManager permette all'utente di scaricare piu' file dal
 web.Questi file possono essere scaricati in piu' parti e ogni parte
 scaricatain una differente sessione in cui l'utente e' collegato ad
@@ -50,17 +50,17 @@ Internet.Questo puo' essere utile agli utenti che hanno una
 connessione dial-up con Internet. Il programma esegue i suoi compiti
 usando wget come back-end.
 
-%description -l pl
-GTM pozwala u¿ytkownikowi na przesy³anie wielu plików ze stron WWW.
-Pliki mog± byæ przesy³ane w wielu czê¶ciach przy czym ka¿da cze¶æ
-przesy³ana np. przy kolejnej sesji modemowej. GTM u¿ywa wget'a do
-wykonywania tych zadañ.
+%description -l pl.UTF-8
+GTM pozwala uÅ¼ytkownikowi na przesyÅ‚anie wielu plikÃ³w ze stron WWW.
+Pliki mogÄ… byÄ‡ przesyÅ‚ane w wielu czÄ™Å›ciach przy czym kaÅ¼da czeÅ›Ä‡
+przesyÅ‚ana np. przy kolejnej sesji modemowej. GTM uÅ¼ywa wget'a do
+wykonywania tych zadaÅ„.
 
-%description -l pt
-GTransferManager permite ao utilizador obter múltiplos ficheiros da
-web. Eles podem ser obtidos em múltiplas partes e cada parte obtida
-numa diferente sessão em que o utilizador esta ligado à Internet. Isto
-é muito útil para utilizadores com ligações dialup. O programa executa
+%description -l pt.UTF-8
+GTransferManager permite ao utilizador obter mÃºltiplos ficheiros da
+web. Eles podem ser obtidos em mÃºltiplas partes e cada parte obtida
+numa diferente sessÃ£o em que o utilizador esta ligado Ã  Internet. Isto
+Ã© muito Ãºtil para utilizadores com ligaÃ§Ãµes dialup. O programa executa
 estas tarefas usando o wget.
 
 %prep
