@@ -17,7 +17,7 @@ URL:		http://gtm.sourceforge.net/
 BuildRequires:	ORBit-devel >= 0.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-libs-devel >= 1.0.0
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libtool
